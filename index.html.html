@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>System Access</title>
+<style>
+body {
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 30%;
+}
+</style>
+</head>
+<body>
+
+<h3>Estabelecendo conexão...</h3>
+<p id="msg">Inicializando protocolo...</p>
+
+<script>
+const msgs = [
+  "Localizando dispositivo...",
+  "Dispositivo encontrado ✔",
+  "Validando permissões...",
+  "Permissões aceitas",
+  "Sincronizando módulos...",
+  "Ativando interface remota...",
+  "Canal seguro estabelecido",
+  "👁 Monitoramento ativo"
+];
+
+let i = 0;
+setInterval(() => {
+  if (i < msgs.length) {
+    document.getElementById("msg").innerText = msgs[i];
+    i++;
+  }
+}, 1600);
+</script>
+
+</body>
+</html>
